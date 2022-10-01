@@ -3,17 +3,22 @@ const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 const port = process.env.PORT || 8080;
 
+const cors = require('cors');
+
 // install express
 const app = express();
 
+// enable cors
+// app.use(cors());
 
 // initialize routes
 app
   .use(bodyParser.json())
-  .use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    next();
-})
+  .use(cors())
+//   .use((req, res, next) => {
+//     res.setHeader('Access-Control-Allow-Origin', '*')
+//     next();
+// })
   .use('/', require('./routes'));
   
 mongodb.initDb((err) => {
@@ -21,7 +26,7 @@ mongodb.initDb((err) => {
     console.log(err);
   } else {
     app.listen(port);
-    console.log(`ctrl+click http://localhost:${port}/`)
-    console.log(`ctrl+click http://localhost:${port}/api-docs`)
+    console.log(`ctrl+click localhost:${port}/`)
+    console.log(`ctrl+click localhost:${port}/api-docs`)
   }
 });
