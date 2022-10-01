@@ -5,7 +5,7 @@ GET http://localhost:8080/ss_hotels
 GET http://localhost:8080/ss_hotels/6325d9779a0a46103327dae1
 
 ###
-GET http://localhost:8080/ss_hotels/6325d9779a0a46103327dae1
+GET http://localhost:8080/ss_hotels/6338561fd594257d8c1bb552
 
 
 # Add new Contact information
@@ -55,7 +55,7 @@ content-type: application/json
 GET https://cse341-sunhotels-api.onrender.com/ss_hotels
 
 ###
-GET https://cse341-sunhotels-api.onrender.com/ss_hotels/6325d9779a0a46103327dae1
+GET https://cse341-sunhotels-api.onrender.com/ss_hotels/6338561fd594257d8c1bb552
 
 
 # Add new Contact information
